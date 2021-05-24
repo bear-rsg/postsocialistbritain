@@ -74,7 +74,7 @@ LANGUAGE_CODE = 'en-gb'
 
 TIME_ZONE = 'Europe/London'
 
-USE_I18N = True
+USE_I18N = False  # Set to True if using internationalisation (translations) in your project
 
 USE_L10N = True
 
