@@ -16,7 +16,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    # Custom apps
+    'communities',
+    'events',
     'general',
+    'outputs',
 ]
 
 MIDDLEWARE = [
