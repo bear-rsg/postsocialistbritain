@@ -4,6 +4,42 @@ from . import models
 admin.site.site_header = 'CLiC Calendar: Admin Dashboard'
 
 
+def publish_story(modeladmin, request, queryset):
+    """
+    Sets all selected items in queryset to published
+    """
+    queryset.update(admin_published=True)
+
+
+publish_story.short_description = "Publish selected stories (will appear on main site)"
+
+
+def unpublish_story(modeladmin, request, queryset):
+    """
+    Sets all selected items in queryset to not published
+    """
+    queryset.update(admin_published=False)
+
+
+unpublish_story.short_description = "Unpublish selected stories (will not appear on main site)"
+
+
+class StoryAdminView(admin.ModelAdmin):
+    """
+    Customise the content of the list of Stories in the Django admin
+    """
+    list_display = ('story_name',
+                    'story_text',
+                    'story_image',
+                    'admin_published',
+                    'meta_created_datetime',
+                    'meta_lastupdated_datetime')
+    list_filter = ('admin_published',)
+    list_per_page = 30
+    ordering = ('-id',)
+    actions = (publish_story, unpublish_story)
+
+
 def approve_response(modeladmin, request, queryset):
     """
     Sets all selected items in queryset to approved
@@ -30,7 +66,8 @@ class ResponseAdminView(admin.ModelAdmin):
     """
     list_display = ('__str__',
                     'story',
-                    'name',
+                    'author_name',
+                    'author_email',
                     'admin_approved',
                     'meta_created_datetime',
                     'meta_lastupdated_datetime')
@@ -39,43 +76,6 @@ class ResponseAdminView(admin.ModelAdmin):
     list_per_page = 30
     ordering = ('-id',)
     actions = (approve_response, disapprove_response)
-
-
-def publish_story(modeladmin, request, queryset):
-    """
-    Sets all selected items in queryset to published
-    """
-    queryset.update(admin_published=True)
-
-
-publish_story.short_description = "Publish selected stories (will appear on main site)"
-
-
-def unpublish_story(modeladmin, request, queryset):
-    """
-    Sets all selected items in queryset to not published
-    """
-    queryset.update(admin_published=False)
-
-
-unpublish_story.short_description = "Unpublish selected stories (will not appear on main site)"
-
-
-class StoryAdminView(admin.ModelAdmin):
-    """
-    Customise the content of the list of Stories in the Django admin
-    """
-    list_display = ('story_text',
-                    'story_image',
-                    'year',
-                    'month',
-                    'admin_published',
-                    'meta_created_datetime',
-                    'meta_lastupdated_datetime')
-    list_filter = ('year', 'month', 'admin_published')
-    list_per_page = 30
-    ordering = ('-id',)
-    actions = (publish_story, unpublish_story)
 
 
 # Register
