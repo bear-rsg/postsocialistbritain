@@ -13,7 +13,7 @@ class Story(models.Model):
     """
 
     story_name = models.CharField(max_length=255)
-    story_text = models.RichTextField()
+    story_text = RichTextField()
     story_image = models.ImageField(upload_to='communities-stories-images', blank=True, null=True)
     # Admin fields
     admin_published_datetime = models.DateTimeField(blank=True, null=True, verbose_name='Date/time first published')
