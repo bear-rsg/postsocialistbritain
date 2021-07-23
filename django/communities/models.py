@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.mail import send_mail
 from django.conf import settings
+from ckeditor.fields import RichTextField
 import logging
 
 logger = logging.getLogger(__name__)
@@ -11,7 +12,8 @@ class Story(models.Model):
     The story that a researcher poses to the users
     """
 
-    story_text = models.TextField()
+    story_name = models.CharField(max_length=255)
+    story_text = models.RichTextField()
     story_image = models.ImageField(upload_to='communities-stories-images', blank=True, null=True)
     # Admin fields
     admin_published_datetime = models.DateTimeField(blank=True, null=True, verbose_name='Date/time first published')
@@ -32,7 +34,7 @@ class Story(models.Model):
 
     class Meta:
         verbose_name_plural = 'Stories'
-        ordering = ['-year', '-month__number', '-month__order']
+        ordering = ['-admin_published_datetime', 'story_name', 'id']
 
 
 class Response(models.Model):
