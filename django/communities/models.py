@@ -17,7 +17,7 @@ class Story(models.Model):
     story_image = models.ImageField(upload_to='communities-stories-images', blank=True, null=True)
     # Admin fields
     admin_published = models.BooleanField(default=False)
-    admin_notes = models.TextField(blank=True, null=True)
+    admin_notes = RichTextField(blank=True, null=True)
     # Metadata fields
     meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
@@ -43,7 +43,7 @@ class Response(models.Model):
     story = models.ForeignKey(Story, related_name='responses', on_delete=models.PROTECT)
     # Admin fields
     admin_approved = models.BooleanField(default=False)
-    admin_notes = models.TextField(blank=True, null=True)
+    admin_notes = RichTextField(blank=True, null=True)
     # Metadata fields
     meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
