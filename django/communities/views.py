@@ -1,7 +1,6 @@
 from django.views.generic import (CreateView, TemplateView, ListView, DetailView)
 from django.urls import reverse_lazy
 from . import (models, forms)
-from datetime import date
 
 
 class StoryListView(ListView):
