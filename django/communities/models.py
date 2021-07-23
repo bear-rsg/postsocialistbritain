@@ -12,29 +12,22 @@ class Story(models.Model):
     The story that a researcher poses to the users
     """
 
-    story_name = models.CharField(max_length=255)
+    story_name = models.CharField(max_length=255, unique=True)
     story_text = RichTextField()
     story_image = models.ImageField(upload_to='communities-stories-images', blank=True, null=True)
     # Admin fields
-    admin_published_datetime = models.DateTimeField(blank=True, null=True, verbose_name='Date/time first published')
+    admin_published = models.BooleanField(default=False)
     admin_notes = models.TextField(blank=True, null=True)
     # Metadata fields
     meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
-
-    @property
-    def admin_published(self):
-        if self.admin_published_datetime is not None:
-            return True
-        else:
-            return False
 
     def __str__(self):
         return str(self.story_text)[0:40]
 
     class Meta:
         verbose_name_plural = 'Stories'
-        ordering = ['-admin_published_datetime', 'story_name', 'id']
+        ordering = ['-meta_created_datetime', 'story_name', 'id']
 
 
 class Response(models.Model):
