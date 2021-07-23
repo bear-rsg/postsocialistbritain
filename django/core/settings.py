@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'captcha',
     'rest_framework',
     'ckeditor',
-    
+
     # Custom apps
     'communities',
     'events',
