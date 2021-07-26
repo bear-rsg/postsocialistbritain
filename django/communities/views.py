@@ -9,7 +9,7 @@ class StoryListView(ListView):
     Class-based view to show the story list template
     """
 
-    template_name = 'researchdata/story-list.html'
+    template_name = 'communities/story-list.html'
     queryset = models.Story.objects.filter(admin_published=True)
 
 
@@ -23,7 +23,7 @@ class StoryDetailView(DetailView):
         - A list of responses related to the current story
     Therefore, suitable content needs to be added to this view's context, via the get_context_data() method
     """
-    template_name = 'researchdata/story-detail.html'
+    template_name = 'communities/story-detail.html'
     queryset = models.Story.objects.filter(admin_published=True)
 
     def get_context_data(self, **kwargs):
@@ -57,4 +57,4 @@ class ResponseCreateSuccessTemplateView(TemplateView):
     Class-based view to show the response create success template
     """
 
-    template_name = 'researchdata/response-create-success.html'
+    template_name = 'communities/response-create-success.html'
