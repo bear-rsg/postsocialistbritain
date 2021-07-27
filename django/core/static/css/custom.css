@@ -231,6 +231,39 @@ main a {
     max-width: 23em;
 }
 
+/* ---------- Stories ---------- */
+
+#stories-list {
+    padding: 1.5em 0;
+}
+
+.stories-list-item {
+    padding: 1em;
+    border-top: 1px solid #344152;
+    display: block;
+    color: #344152;
+}
+
+.stories-list-item:last-of-type {
+    border-bottom: 1px solid #344152;
+}
+
+.stories-list-item:hover {
+    background-color: #344152;
+    color: white;
+    text-decoration: none;
+}
+
+.stories-list-item-name {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.stories-list-item-text {
+    opacity: 0.8;
+    font-size: 0.95;
+    margin-top: 0.3em;
+}
 
 /* ---------- Footer ---------- */
 

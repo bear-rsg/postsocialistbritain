@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . import models
 
-admin.site.site_header = 'CLiC Calendar: Admin Dashboard'
+admin.site.site_header = 'Post-Socialist Britain: Admin Dashboard'
 
 
 def publish_story(modeladmin, request, queryset):
