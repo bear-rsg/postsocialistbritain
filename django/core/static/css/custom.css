@@ -234,7 +234,7 @@ main a {
 /* ---------- Stories ---------- */
 
 #stories-list-filter label {
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 #stories-list {
