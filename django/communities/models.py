@@ -64,7 +64,7 @@ class Response(models.Model):
                           'There has been a new response submitted to the Post-Socialist Britain website.',
                           settings.DEFAULT_FROM_EMAIL,
                           settings.NOTIFICATION_EMAIL,
-                          fail_silently=True)
+                          fail_silently=False)
             except Exception:
                 logger.exception("Failed to send email")
 
