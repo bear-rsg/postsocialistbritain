@@ -24,13 +24,14 @@
             {% endif %}
 
         </div>
+
+        <div id="story-detail-content-respondlink" class="form-show">Respond to this story</div>
     
     </div>
 
     <!-- Responses -->
     <div id="response-create-bg" class="form-hide">
         <div id="response-create">
-            <h2>Share Your Response</h2>
             <!-- Form to create and submit an response to the above story -->
             <form enctype="multipart/form-data" id="response-create-form" name="response-create-form" method="POST" action="{% url 'communities:response-create' %}">
                 <!-- Security CSRF token -->
@@ -62,7 +63,7 @@
     
     <!-- List of all users' responses -->
     <div id="response-list">
-        <h2>All Responses</h2>
+        <h2>Responses</h2>
 
         {% for response in responses %}
 
@@ -74,9 +75,12 @@
                 <div class="response-list-item-text">
                     {{ response.response_text | safe | linebreaksbr }}
                 </div>
-                {% if response.name %}
+                {% if response.response_image %}
+                    <img class="response-list-item-image" src="{{ response.response_image }}">
+                {% endif %}
+                {% if response.author_name %}
                     <div class="response-list-item-name">
-                        {{ response.name }}
+                        {{ response.author_name }}
                     </div>
                 {% endif %}
             </div>
