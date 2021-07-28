@@ -11,14 +11,17 @@ class ResponseCreateForm(forms.ModelForm):
     response_text = forms.CharField(max_length=1000,
                                     widget=forms.Textarea(attrs={'placeholder': 'Respond to this story here'}),
                                     label='Response')
-    response_image = forms.ImageField(label='Optional. Provide an image to illustrate your response.')
+    response_image = forms.ImageField(label='Optional. Provide an image to illustrate your response.',
+                                      required=False)
     author_name = forms.CharField(label='Name',
-                                  widget=forms.TextInput(attrs={'placeholder': '(Optional)'}))
+                                  widget=forms.TextInput(attrs={'placeholder': '(Optional)'}),
+                                  required=False)
     author_email = forms.EmailField(label='Email',
                                     widget=forms.TextInput(attrs={
                                         'placeholder':
                                         '(Optional. Your email address will not be made publicly visible.)'
-                                    }))
+                                    }),
+                                    required=False)
     captcha = ReCaptchaField(widget=ReCaptchaV3, label='')
 
     class Meta:

@@ -265,6 +265,30 @@ main a {
     margin-top: 0.3em;
 }
 
+#response-create-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#response-create {
+    position: fixed;
+    padding: 0 2em 1em 2em;
+    border: 1px solid black;
+    background: white;
+    width: 80%;
+    top: 5vh;
+    left: 10%;
+    height: 90vh;
+    overflow: auto;
+    z-index: 10000;
+}
+
 /* ---------- Footer ---------- */
 
 footer {

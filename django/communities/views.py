@@ -49,7 +49,7 @@ class ResponseCreateView(CreateView):
     """
 
     form_class = forms.ResponseCreateForm
-    success_url = reverse_lazy('response-create-success')
+    success_url = reverse_lazy('communities:response-create-success')
 
 
 class ResponseCreateSuccessTemplateView(TemplateView):

@@ -57,14 +57,14 @@ class Response(models.Model):
         """
 
         # Check if this is a new response
-        if self.meta_created_datetime is None:
+        if self.meta_created_datetime is None and settings.DEBUG == False:
             # Send email alert to research team
             try:
                 send_mail('Post-Socialist Britain: New response',
                           'There has been a new response submitted to the Post-Socialist Britain website.',
                           settings.DEFAULT_FROM_EMAIL,
                           settings.NOTIFICATION_EMAIL,
-                          fail_silently=False)
+                          fail_silently=True)
             except Exception:
                 logger.exception("Failed to send email")
 
