@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-    color: #b3740f;
+    color: #ac0d0d;
 }
 
 h1 {
@@ -139,7 +139,7 @@ button[type='submit'],
 button[type='submit']:visited {
     background: #C80E0F;
     border: none;
-    color: black;
+    color: white;
     font-weight: bold;
     padding: 1em;
     border-radius: 0.5em;
@@ -147,8 +147,8 @@ button[type='submit']:visited {
 }
 
 button[type='submit']:hover {
-    background: #b3740f;
-    color: black;
+    background: #ac0d0d;
+    color: white;
 }
 
 .form-submit-notes {
@@ -275,6 +275,10 @@ main a {
     height: 100vh;
     z-index: 9999;
     background: rgba(0, 0, 0, 0.7);
+}
+
+label[for=id_story] {
+    display: none;
 }
 
 #story-detail-content-image img {
