@@ -10,12 +10,12 @@ body {
 }
 
 a {
-    color: #EA2027;
+    color: #C80E0F;
     font-weight: 500;
 }
 
 a:hover {
-    color: #b3740f;
+    color: #ac0d0d;
 }
 
 h1 {
@@ -23,13 +23,13 @@ h1 {
     margin: 0;
     padding: 0;
     line-height: 1em;
-    color: #EA2027;
+    color: #C80E0F;
     font-weight: 200;
 }
 
 h2 {
     padding-top: 2em;
-    color: #EA2027;
+    color: #C80E0F;
     font-weight: 300;
     text-align: center;
     font-size: 1.7em;
@@ -38,7 +38,7 @@ h2 {
 
 h3 {
     padding: 2em 0 0.5em 0;
-    color: #EA2027;
+    color: #C80E0F;
     font-weight: 500;
     text-align: left;
     font-size: 1.5em;
@@ -79,7 +79,7 @@ label {
 }
 
 label.label-active {
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 .helptext {
@@ -132,14 +132,14 @@ form ul li label {
 }
 
 form ul li label:hover {
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 button[type='submit'],
 button[type='submit']:visited {
-    background: #EA2027;
+    background: #C80E0F;
     border: none;
-    color: black;
+    color: white;
     font-weight: bold;
     padding: 1em;
     border-radius: 0.5em;
@@ -147,8 +147,8 @@ button[type='submit']:visited {
 }
 
 button[type='submit']:hover {
-    background: #b3740f;
-    color: black;
+    background: #ac0d0d;
+    color: white;
 }
 
 .form-submit-notes {
@@ -169,7 +169,7 @@ nav {
     display: inline-block;
     text-transform: capitalize;
     font-size: 1.6em;
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 .navbar-nav {
@@ -183,12 +183,12 @@ nav {
 }
 
 .nav-link.active {
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 nav a:hover,
 .dropdown-item:hover {
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 /* ---------- Main ---------- */
@@ -222,7 +222,7 @@ main a {
 
 #welcome-banner-title {
     font-weight: 100;
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 #welcome-banner-tagline {
@@ -231,6 +231,103 @@ main a {
     max-width: 23em;
 }
 
+/* ---------- Stories ---------- */
+
+#stories-list {
+    padding: 1.5em 0;
+    margin-top: 1em;
+}
+
+.stories-list-item {
+    padding: 1em;
+    border-top: 1px solid #AAA;
+    display: block;
+    color: #344152;
+}
+
+.stories-list-item:first-of-type {
+    border-top: 0px solid #AAA;
+}
+
+.stories-list-item:hover {
+    background-color: #344152;
+    color: white;
+    text-decoration: none;
+}
+
+.stories-list-item-name {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.stories-list-item-text {
+    opacity: 0.8;
+    font-size: 0.95;
+    margin-top: 0.3em;
+}
+
+#response-create-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+label[for=id_story] {
+    display: none;
+}
+
+#story-detail-content-image img {
+    max-width: 80%;
+    margin: 2em auto;
+    display: block;
+}
+
+#story-detail-content-respondlink {
+    background: #C80E0F;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin: 4em auto;
+    width: 13em;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+#response-create {
+    position: fixed;
+    padding: 0 2em 1em 2em;
+    border: 1px solid black;
+    background: white;
+    width: 80%;
+    top: 5vh;
+    left: 10%;
+    height: 90vh;
+    overflow: auto;
+    z-index: 10000;
+}
+
+.response-list-item {
+    margin: 2em 0;
+    border: 1px solid #AAA;
+    padding: 1em;
+    background: #EEE;
+}
+
+.response-list-item-created {
+    font-size: 0.85em;
+    line-height: 1.5em;
+    text-align: right;
+    color: #505050;
+}
+
+.response-list-item-text {
+    color: #303030;
+}
 
 /* ---------- Footer ---------- */
 
@@ -245,7 +342,7 @@ footer {
 }
 
 footer a:hover {
-    color: #EA2027;
+    color: #C80E0F;
 }
 
 /* ---------- Error Pages ---------- */

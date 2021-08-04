@@ -69,6 +69,12 @@
                             About
                         </a>
                     </li>
+                    <!-- Communities -->
+                    <li class="nav-item">
+                        <a class="nav-link{% if '/communities/' in request.path %} active{% endif %}" href="{% url 'communities:story-list' %}">
+                            Communities
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

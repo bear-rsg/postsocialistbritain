@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+    
+    <div class="container">
+
+        <h2>Communities</h2>
+
+        <!-- Filter -->
+        <div id="stories-list-filter">
+            <label for="stories-list-filter-input">Search</label>
+            <input type="text" id="stories-list-filter-input" title="stories-list-filter-input" name="stories-list-filter-input">
+        </div>
+
+        <!-- Stories -->
+        <section id="stories-list">
+            {% for object in object_list %}
+                <a href="{% url 'communities:story-detail' object.id %}" class="stories-list-item">
+                    <div class="stories-list-item-name"> {{ object.story_name }}</div>
+                    <div class="stories-list-item-text"> {{ object.story_text | striptags | truncatechars:50 }}</div>
+                </a>
+            {% empty %}
+                <p>
+                    There are no community stories to show yet. Please check back soon.
+                </p>
+            {% endfor %}
+        </section>
+
+
+        <script>
+            $(document).ready(function() {
+                function filter_list(filterText, itemClass)
+                {
+                    // For each instance of the class
+                    $(itemClass).each(function(){
+                        // If the filter text exists within the text contained within this class, then show it
+                        if($(this).text().toUpperCase().indexOf(filterText) != -1) $(this).show();
+                        // If the filter text does not exist then hide this instance of the class
+                        else $(this).hide();
+                    });
+                }
+                $("#stories-list-filter-input").on('keyup', function(){
+                    var filterText = $(this).val().toUpperCase();
+                    filter_list(filterText, ".stories-list-item")
+                });
+            });
+        </script>
+    
+    </div>
+
+{% endblock %}
