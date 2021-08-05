@@ -24,16 +24,6 @@ class Event(models.Model):
     meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
 
-    def __str__(self):
-        return str(self.story_text)[0:40]
-
-    class Meta:
-        verbose_name_plural = 'Stories'
-        ordering = ['-meta_created_datetime', 'story_name', 'id']
-
-    def __str__(self):
-        return self.name
-
     @property
     def is_upcoming(self):
         return date.today() <= self.finishdate
@@ -41,3 +31,9 @@ class Event(models.Model):
     @property
     def is_past(self):
         return self.finishdate < date.today()
+    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['-startdate', '-starttime', '-finishdate', '-finishtime', 'id']
