@@ -31,7 +31,7 @@ class Event(models.Model):
     @property
     def is_past(self):
         return self.finishdate < date.today()
-    
+
     def __str__(self):
         return self.name
 
