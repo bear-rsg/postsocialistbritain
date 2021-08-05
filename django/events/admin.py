@@ -34,7 +34,7 @@ class EventAdminView(admin.ModelAdmin):
                     'location',
                     'booking_email',
                     'booking_url')
-    list_filter = ('admin_approved', )
+    list_filter = ('admin_published', )
     search_fields = ('name', 'description', 'location', 'booking_email', 'booking_url')
     list_per_page = 30
     ordering = ('-id',)
