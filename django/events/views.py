@@ -8,7 +8,7 @@ class EventListView(ListView):
     Class-based view to show the event list template
     """
 
-    template_name = 'communities/event-list.html'
+    template_name = 'events/event-list.html'
     queryset = models.Event.objects.filter(admin_published=True)
 
 
@@ -17,5 +17,5 @@ class EventDetailView(DetailView):
     Event: Detail
     Class-based view to show the event detail template
     """
-    template_name = 'communities/event-detail.html'
+    template_name = 'events/event-detail.html'
     queryset = models.Event.objects.filter(admin_published=True)
