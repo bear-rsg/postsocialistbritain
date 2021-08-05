@@ -9,17 +9,22 @@ class Event(models.Model):
     """
 
     name = models.CharField(max_length=255)
+    description = RichTextField(blank=True, null=True)
+    image = models.ImageField(upload_to='events-images', blank=True, null=True)
+
     location = models.CharField(max_length=255)
     startdate = models.DateField()
     starttime = models.TimeField()
     finishdate = models.DateField()
     finishtime = models.TimeField()
-    description = RichTextField(blank=True, null=True)
+    
     bookingemail = models.CharField(max_length=255, blank=True, null=True)
     bookingurl = models.TextField(blank=True, null=True)
+
     # Admin fields
     admin_published = models.BooleanField(default=False)
     admin_notes = RichTextField(blank=True, null=True)
+    
     # Metadata fields
     meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
