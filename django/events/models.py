@@ -13,10 +13,8 @@ class Event(models.Model):
     image = models.ImageField(upload_to='events-images', blank=True, null=True)
     location = models.CharField(max_length=255)
 
-    start_date = models.DateField()
-    start_time = models.TimeField()
-    finish_date = models.DateField()
-    finish_time = models.TimeField()
+    start_datetime = models.DateTimeField(verbose_name='Event start date/time')
+    finish_datetime = models.DateTimeField(verbose_name='Event finish date/time')
 
     booking_email = models.CharField(max_length=255, blank=True, null=True)
     booking_url = models.TextField(blank=True, null=True)
@@ -41,4 +39,4 @@ class Event(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['-start_date', '-start_time', '-finish_date', '-finish_time', 'id']
+        ordering = ['-start_datetime', '-finish_datetime', 'name', 'id']

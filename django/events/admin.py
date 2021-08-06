@@ -27,10 +27,8 @@ class EventAdminView(admin.ModelAdmin):
     Customise the content of the list of Responses in the Django admin
     """
     list_display = ('name',
-                    'start_date',
-                    'start_time',
-                    'finish_date',
-                    'finish_time',
+                    'start_datetime',
+                    'finish_datetime',
                     'location',
                     'booking_email',
                     'booking_url')
