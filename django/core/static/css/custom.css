@@ -377,6 +377,16 @@ label[for=id_story] {
     font-size: 0.95em;
 }
 
+.events-detail-dataitem {
+    margin: 1.3em 0;
+    font-size: 1.1em;
+}
+
+.events-detail-dataitem strong {
+    display: inline-block;
+    min-width: 8em;
+}
+
 /* ---------- Footer ---------- */
 
 footer {
