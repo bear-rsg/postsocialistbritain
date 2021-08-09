@@ -240,17 +240,15 @@ main a {
 
 .stories-list-item {
     padding: 1em;
-    border-top: 1px solid #AAA;
+    margin-bottom: 1.3em;
+    border: 1px solid #AAA;
     display: block;
     color: #344152;
 }
 
-.stories-list-item:first-of-type {
-    border-top: 0px solid #AAA;
-}
-
 .stories-list-item:hover {
     background-color: #344152;
+    border: 1px solid #344152;
     color: white;
     text-decoration: none;
 }
@@ -327,6 +325,56 @@ label[for=id_story] {
 
 .response-list-item-text {
     color: #303030;
+}
+
+/* ---------- Events ---------- */
+
+#events-list {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.events-list-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.3em;
+    padding: 1em;
+    width: 17em;
+    max-width: 90%;
+    height: 21em;
+    border: 1px solid #AAA;
+    color: #344152;
+    text-align: left;
+}
+
+.events-list-item:hover {
+    background-color: #344152;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #344152;
+}
+
+.events-list-item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.events-list-item-details {
+    font-size: 0.85em;
+    opacity: 0.8;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #AAA;
+}
+
+.events-list-item-details div {
+    margin: 0.5em 0;
+}
+
+.events-list-item-text {
+    font-size: 0.95em;
 }
 
 /* ---------- Footer ---------- */
