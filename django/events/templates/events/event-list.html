@@ -19,9 +19,9 @@
                 <a href="{% url 'events:event-detail' object.id %}" class="events-list-item">
                     <div class="events-list-item-name"> {{ object.name }}</div>
                     <div class="events-list-item-details">
-                        <div>Location: <strong>{{ object.location }}</strong></div>
-                        <div>Start: <strong>{{ object.start_datetime }}</strong></div>
-                        <div>Finish: <strong>{{ object.finish_datetime }}</strong></div>
+                        <div><strong>Location:</strong> {{ object.location }}</div>
+                        <div><strong>Start:</strong> {{ object.start_datetime }}</div>
+                        <div><strong>Finish:</strong> {{ object.finish_datetime }}</div>
                     </div>
                     <div class="events-list-item-text"> {{ object.description | striptags | truncatechars:100 }}</div>
                 </a>
