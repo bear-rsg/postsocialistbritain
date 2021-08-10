@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('general.urls')),
     path('communities/', include('communities.urls')),
     path('events/', include('events.urls')),
+    path('outputs/', include('outputs.urls')),
 
     # Include Django admin urls
     path('dashboard/', admin.site.urls),
