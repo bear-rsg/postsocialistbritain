@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<div id="output-detail" class="container">
+    
+    <h2 id="output-detail-name">{{ object.name }}</h2>
+    
+    <div id="output-detail-description">
+        {{ object.description | safe }}
+    </div>
+
+
+</div>
+
+{% endblock %}
