@@ -8,6 +8,7 @@ urlpatterns = [
     # Custom app urls
     path('', include('general.urls')),
     path('communities/', include('communities.urls')),
+    path('events/', include('events.urls')),
 
     # Include Django admin urls
     path('dashboard/', admin.site.urls),
