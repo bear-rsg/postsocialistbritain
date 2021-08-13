@@ -17,8 +17,15 @@
         <section id="outputs-list">
             {% for object in object_list %}
                 <a href="{% url 'outputs:output-detail' object.id %}" class="outputs-list-item">
-                    <div class="outputs-list-item-name"> {{ object.name }}</div>
-                    <div class="outputs-list-item-text"> {{ object.description | striptags | truncatechars:100 }}</div>
+                    <div class="outputs-list-item-icons">
+                        <span class="outputs-list-item-icons-image {% if object.image %}active{% endif %}"><i class="far fa-image"></i></span>
+                        <span class="outputs-list-item-icons-file {% if object.file %}active{% endif %}"><i class="far fa-file"></i></span>
+                        <span class="outputs-list-item-icons-link {% if object.link %}active{% endif %}"><i class="fas fa-link"></i></span>
+                    </div>
+                    <div class="outputs-list-item-text">
+                        <div class="outputs-list-item-text-name"> {{ object.name }}</div>
+                        <div class="outputs-list-item-text-description"> {{ object.description | striptags | truncatechars:100 }}</div>
+                    </div>
                 </a>
             {% empty %}
                 <p>
