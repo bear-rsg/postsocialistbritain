@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+import os
 
 
 class Output(models.Model):
@@ -23,6 +24,10 @@ class Output(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def filename(self):
+        return os.path.basename(self.file.name)
 
     class Meta:
         ordering = ['name', '-id']
