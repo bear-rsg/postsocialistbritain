@@ -81,6 +81,12 @@
                             Events
                         </a>
                     </li>
+                    <!-- Outputs -->
+                    <li class="nav-item">
+                        <a class="nav-link{% if '/outputs/' in request.path %} active{% endif %}" href="{% url 'outputs:output-list' %}">
+                            Outputs
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+    
+    <div class="container">
+
+        <h2>Outputs</h2>
+
+        <!-- Filter -->
+        <div id="outputs-list-filter">
+            <label for="outputs-list-filter-input">Search</label>
+            <input type="text" id="outputs-list-filter-input" title="outputs-list-filter-input" name="outputs-list-filter-input">
+        </div>
+
+        <!-- Outputs -->
+        <section id="outputs-list">
+            {% for object in object_list %}
+                <a href="{% url 'outputs:output-detail' object.id %}" class="outputs-list-item">
+                    <div class="outputs-list-item-icons">
+                        <span class="outputs-list-item-icons-image {% if object.image %}active{% endif %}"><i class="far fa-image"></i></span>
+                        <span class="outputs-list-item-icons-file {% if object.file %}active{% endif %}"><i class="far fa-file"></i></span>
+                        <span class="outputs-list-item-icons-link {% if object.link %}active{% endif %}"><i class="fas fa-link"></i></span>
+                    </div>
+                    <div class="outputs-list-item-text">
+                        <div class="outputs-list-item-text-name"> {{ object.name }}</div>
+                        <div class="outputs-list-item-text-description"> {{ object.description | striptags | truncatechars:100 }}</div>
+                    </div>
+                </a>
+            {% empty %}
+                <p>
+                    There are no outputs to show yet. Please check back soon.
+                </p>
+            {% endfor %}
+        </section>
+
+        <script>
+            $(document).ready(function() {
+                function filter_list(filterText, itemClass)
+                {
+                    // For each instance of the class
+                    $(itemClass).each(function(){
+                        // If the filter text exists within the text contained within this class, then show it
+                        if($(this).text().toUpperCase().indexOf(filterText) != -1) $(this).show();
+                        // If the filter text does not exist then hide this instance of the class
+                        else $(this).hide();
+                    });
+                }
+                $("#outputs-list-filter-input").on('keyup', function(){
+                    var filterText = $(this).val().toUpperCase();
+                    filter_list(filterText, ".outputs-list-item")
+                });
+            });
+        </script>
+    
+    </div>
+
+{% endblock %}
