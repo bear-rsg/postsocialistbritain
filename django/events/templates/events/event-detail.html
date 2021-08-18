@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<div id="event-detail" class="container">
+    
+    <h2 id="event-detail-name">{{ object.name }}</h2>
+    
+    <div class="events-detail-dataitem">
+        <strong>Location:</strong> {{ object.location }}
+    </div>
+    <div class="events-detail-dataitem">
+        <strong>Start:</strong> {{ object.start_datetime }}
+    </div>
+    <div class="events-detail-dataitem">
+        <strong>Finish:</strong> {{ object.finish_datetime }}
+    </div>
+
+    {% if object.booking_url or object.booking_email %}
+        <h3>How to Book</h3>
+    {% endif %}
+    {% if object.booking_email %}
+        <div class="events-detail-dataitem">
+            <strong>Email:</strong> <a href="mailto:{{ object.booking_email }}">{{ object.booking_email }}</a>
+        </div>
+    {% endif %}
+    {% if object.booking_url %}
+        <div class="events-detail-dataitem">
+            <strong>URL:</strong> <a href="{{ object.booking_url }}">{{ object.booking_url }}</a>
+        </div>
+    {% endif %}
+
+    <h3>Event Description</h3>
+    <div id="event-detail-description">
+        {{ object.description | safe }}
+    </div>
+
+
+</div>
+
+{% endblock %}

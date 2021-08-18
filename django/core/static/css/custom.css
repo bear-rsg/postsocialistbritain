@@ -1,0 +1,509 @@
+
+/* ---------- General ---------- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #344152;
+    margin: 0;
+    font-weight: 300;
+    background-color: white;
+}
+
+a {
+    color: #C80E0F;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ac0d0d;
+}
+
+h1 {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    color: #C80E0F;
+    font-weight: 200;
+}
+
+h2 {
+    padding-top: 2em;
+    color: #C80E0F;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.7em;
+    margin: 1.5em 0 1em 0;
+}
+
+h3 {
+    padding: 2em 0 0.5em 0;
+    color: #C80E0F;
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.iframe-large {
+    display: block;
+    margin: 0 auto;
+    overflow: scroll;
+    width: 100%;
+    height: calc(90vh - 7em);
+    border: none;
+}
+
+.youtube-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0;
+    height: 0;
+    margin: 7em auto;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- Forms ---------- */
+
+label {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 2em;
+    font-size: 0.95em;
+}
+
+label.label-active {
+    color: #C80E0F;
+}
+
+.helptext {
+    font-size: 0.9em;
+    color: #AAA;
+}
+
+.errorlist {
+    color: red;
+}
+
+input,
+textarea,
+select,
+button[type='submit'] {
+    width: 100%;
+    display: block;
+    padding: 0.3em;
+}
+
+#story-create-form input,
+#story-create-form textarea,
+#story-create-form select {
+    background: #EEE;
+    border: none;
+}
+
+#story-create-form input[type='file'] {
+    border: 1px solid white;
+    background: none;
+}
+
+input[type='checkbox'] {
+    display: inline;
+    width: auto;
+}
+
+form ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+form ul li {
+    display: inline-block;
+}
+
+form ul li label {
+    margin: 0.3em 2em 0 0;
+    cursor: pointer;
+}
+
+form ul li label:hover {
+    color: #C80E0F;
+}
+
+button[type='submit'],
+button[type='submit']:visited {
+    background: #C80E0F;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 0.5em;
+    margin: 3em 0 1em 0;
+}
+
+button[type='submit']:hover {
+    background: #ac0d0d;
+    color: white;
+}
+
+.form-submit-notes {
+    font-size: 0.9em;
+    color: #AAA;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+    color: #344152;
+    background-color: white;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.navbar-brand {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 1.6em;
+    color: #C80E0F;
+}
+
+.navbar-nav {
+    letter-spacing: 0.15em;
+}
+
+.nav-link {
+    font-weight: 300;
+    font-size: 1.1em;
+    color: #344152;
+}
+
+.nav-link.active {
+    color: #C80E0F;
+}
+
+nav a:hover,
+.dropdown-item:hover {
+    color: #C80E0F;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    padding-bottom: 4em;
+}
+
+main p,
+main ul,
+main ol {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+main a {
+    text-decoration: none;
+}
+
+/* ---------- Welcome ---------- */
+
+#welcome-banner {
+    /* https://unsplash.com/photos/VweMmg8XMfw */
+	background: url('../images/welcome-bg.jpg');
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+	background-color: white;
+    height: calc(100vh - 3em);
+}
+
+#welcome-banner-title {
+    font-weight: 100;
+    color: #C80E0F;
+}
+
+#welcome-banner-tagline {
+    font-weight: 300;
+    color: #344152;
+    max-width: 23em;
+}
+
+/* ---------- Stories ---------- */
+
+#stories-list {
+    padding: 1.5em 0;
+    margin-top: 1em;
+}
+
+.stories-list-item {
+    padding: 1em;
+    margin-bottom: 1.3em;
+    border: 1px solid #AAA;
+    display: block;
+    color: #344152;
+}
+
+.stories-list-item:hover {
+    background-color: #344152;
+    border: 1px solid #344152;
+    color: white;
+    text-decoration: none;
+}
+
+.stories-list-item-name {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.stories-list-item-text {
+    opacity: 0.8;
+    font-size: 0.95;
+    margin-top: 0.3em;
+}
+
+#response-create-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+label[for=id_story] {
+    display: none;
+}
+
+#story-detail-content-image img {
+    max-width: 80%;
+    margin: 2em auto;
+    display: block;
+}
+
+#story-detail-content-respondlink {
+    background: #C80E0F;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin: 4em auto;
+    width: 13em;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+#response-create {
+    position: fixed;
+    padding: 0 2em 1em 2em;
+    border: 1px solid black;
+    background: white;
+    width: 80%;
+    top: 5vh;
+    left: 10%;
+    height: 90vh;
+    overflow: auto;
+    z-index: 10000;
+}
+
+.response-list-item {
+    margin: 2em 0;
+    border: 1px solid #AAA;
+    padding: 1em;
+    background: #EEE;
+}
+
+.response-list-item-created {
+    font-size: 0.85em;
+    line-height: 1.5em;
+    text-align: right;
+    color: #505050;
+}
+
+.response-list-item-text {
+    color: #303030;
+}
+
+/* ---------- Events ---------- */
+
+#events-list {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.events-list-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.3em;
+    padding: 1em;
+    width: 17em;
+    max-width: 90%;
+    height: 21em;
+    border: 1px solid #AAA;
+    color: #344152;
+    text-align: left;
+}
+
+.events-list-item:hover {
+    background-color: #344152;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #344152;
+}
+
+.events-list-item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.events-list-item-details {
+    font-size: 0.85em;
+    opacity: 0.8;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #AAA;
+}
+
+.events-list-item-details div {
+    margin: 0.5em 0;
+}
+
+.events-list-item-text {
+    font-size: 0.95em;
+}
+
+.events-detail-dataitem {
+    margin: 1.3em 0;
+    font-size: 1.1em;
+}
+
+.events-detail-dataitem strong {
+    display: inline-block;
+    min-width: 8em;
+}
+
+/* ---------- Outputs ---------- */
+
+#outputs-list {
+    padding-top: 2em;
+}
+
+.outputs-list-item {
+    padding: 1em;
+    display: block;
+    border-bottom: 1px solid #CCC;
+    color: black;
+}
+
+.outputs-list-item:last-of-type {
+    border-bottom: 0px;
+}
+
+.outputs-list-item:hover {
+    background-color: #344152;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #344152;
+}
+
+.outputs-list-item-icons {
+    display: inline-block;
+    width: 13em;
+    text-align: left;
+    vertical-align: top;
+}
+
+.outputs-list-item-icons span {
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    font-size: 1.8em;
+    opacity: 0.1;
+}
+
+.outputs-list-item-icons span.active {
+    opacity: 1;
+}
+
+.outputs-list-item-text {
+    display: inline-block;
+    width: calc(100%-14em);
+    vertical-align: top;
+}
+
+.outputs-list-item-text-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.outputs-list-item-text-description {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+#output-detail-description {
+    margin: 1em auto 3em auto;
+}
+
+#output-detail-file,
+#output-detail-link {
+    font-size: 1.2em;
+    border: 1px solid #344152;
+    display: block;
+    margin: 2em auto;
+    color: #344152;
+    background-color: white;
+    padding: 1em;
+}
+
+#output-detail-file a,
+#output-detail-link a {
+    color: #344152;
+    font-weight: bold;
+}
+
+#output-detail-file label,
+#output-detail-link label {
+    padding: 0;
+    margin: 0 0 0.2em 0;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+#output-detail-image img {
+    max-width: 100%;
+    display: block;
+    margin: 3em auto;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 5em 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#footer-content-text {
+    margin-top: 2em;
+}
+
+footer a:hover {
+    color: #C80E0F;
+}
+
+/* ---------- Error Pages ---------- */
+
+.errorpage-path {
+    font-weight: bold;
+}
+
+.errorpage-code {
+    margin-top: 3em;
+    font-size: 0.8em;
+}
