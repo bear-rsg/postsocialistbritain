@@ -211,13 +211,18 @@ main a {
 /* ---------- Welcome ---------- */
 
 #welcome-banner {
-    /* https://unsplash.com/photos/VweMmg8XMfw */
 	background: url('../images/welcome-bg.jpg');
 	background-size: cover;
 	background-position: bottom;
 	background-attachment: fixed;
 	background-color: white;
     height: calc(100vh - 3em);
+}
+
+#welcome-banner-content {
+    background: white;
+    width: 43em;
+    max-width: 100%;
 }
 
 #welcome-banner-title {
