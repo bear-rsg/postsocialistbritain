@@ -28,8 +28,12 @@
         padding: 5em;
     }
 
+    #welcome-banner-content {
+        margin-top: 4vh;
+        padding: 3em;
+    }
+
     #welcome-banner-title {
-        padding-top: 10vh;
         font-size: 3.2em;
     }
 
