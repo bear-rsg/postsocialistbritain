@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section id="welcome-content" class="container">
+<section id="welcome" class="container">
     <h2>Welcome</h2>
     <p>
         <strong>Post-Socialist Britain?</strong> is an AHRC-funded research project that explores what happens to the connection between collective memory and political identity in the process of migration. Focussing on countries with an experience of state socialist rule, the project explores how the popular notion that political extremism in post-socialist countries is underpinned by collective memory of authoritarianism is based on the assumption that those remembering authoritarianism do so in their country of origin. <strong>Post-Socialist Britain?</strong> breaks out of this national mould to explore if and how memory is linked to political identity when the individual moves to a new national context. It is often assumed that memory informs political behaviour and identity, but we don’t know exactly if and how that connection works. <strong>Post-Socialist Britain?</strong> explores this question from a unique perspective.
@@ -19,7 +19,7 @@
     </p>
 </section>
 
-<section id="welcome-content" class="container">
+<section id="thiswebsite" class="container">
     <h2>This Website</h2>
     <p>
         You can engage with our project through this website in the following ways:
@@ -40,7 +40,7 @@
     </ul>
 </section>
 
-<section class="container">
+<section id="social" class="container">
     <h2>Social</h2>
     <!-- Twitter feed -->
     <div class="twitter-feed" tabindex="0">
@@ -53,7 +53,7 @@
 
         // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
         $('#welcome-banner-proceed').on('click', function(){
-            $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 50 }, 800); 
+            $('html,body').animate({ scrollTop: $('#welcome').offset().top - 50 }, 800); 
         });
 
     });
