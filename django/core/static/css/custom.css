@@ -251,6 +251,18 @@ main a {
     padding: 1em;
 }
 
+/* ---------- About ---------- */
+
+.about-team-person {
+    display: block;
+    margin: 5em auto;
+}
+
+.about-team-person img {
+    border-radius: 100%;
+    width: 13em;
+}
+
 /* ---------- Stories ---------- */
 
 #stories-list {
