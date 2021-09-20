@@ -19,6 +19,27 @@
     </p>
 </section>
 
+<section id="welcome-content" class="container">
+    <h2>This Website</h2>
+    <p>
+        You can engage with our project through this website in the following ways:
+    </p>
+    <ul>
+        <li>
+            Read more detailed information <a href="{% url 'general:about' %}">about the project</a>
+        </li>
+        <li>
+            Discover and respond to <a href="{% url 'communities:story-list' %}">community stories</a>
+        </li>
+        <li>
+            See our upcoming and past <a href="{% url 'events:event-list' %}">events</a>
+        </li>
+        <li>
+            View our <a href="{% url 'outputs:output-list' %}">project outputs</a>
+        </li>
+    </ul>
+</section>
+
 <section class="container">
     <h2>Social</h2>
     <!-- Twitter feed -->
