@@ -261,6 +261,20 @@ main a {
 .about-team-person img {
     border-radius: 100%;
     width: 13em;
+    max-width: 100%;
+}
+
+.about-partners-partner {
+    display: block;
+    margin: 5em auto;
+}
+
+.about-partners-partner img {
+    display: block;
+    margin: 1em auto;
+    width: 13em;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ---------- Stories ---------- */
