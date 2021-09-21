@@ -2,23 +2,61 @@
 {% load static %}
 
 {% block main %}
-    
-    <div id="welcome-banner">
-        <div id="welcome-banner-content">
-            <div id="welcome-banner-title">
-                <strong>Post-Socialist</strong> <span>Britain</span>
-            </div>
-            <div id="welcome-banner-tagline">
-                A research project led by Professor Sara Jones at the University of Birmingham
-            </div>
-        </div>
+
+<section id="welcome-banner">
+    <div id="welcome-banner-proceed">
+        <i class="fas fa-angle-down"></i>
     </div>
-    
-    <div class="container">
-        <h2>Welcome</h2>
-        <p>
-            (Content to be added)
-        </p>
+</section>
+
+<section id="welcome" class="container">
+    <h2>Welcome</h2>
+    <p>
+        <strong>Post-Socialist Britain?</strong> is an AHRC-funded research project that explores what happens to the connection between collective memory and political identity in the process of migration. Focussing on countries with an experience of state socialist rule, the project explores how the popular notion that political extremism in post-socialist countries is underpinned by collective memory of authoritarianism is based on the assumption that those remembering authoritarianism do so in their country of origin. <strong>Post-Socialist Britain?</strong> breaks out of this national mould to explore if and how memory is linked to political identity when the individual moves to a new national context. It is often assumed that memory informs political behaviour and identity, but we don’t know exactly if and how that connection works. <strong>Post-Socialist Britain?</strong> explores this question from a unique perspective.
+    </p>
+    <p>
+        The research findings of <strong>Post-Socialist Britain?</strong> will lead to a better understanding of how immigrant groups negotiate different aspects of their identities and the factors that contribute to the development of political behaviour. Contemporary Britain is made up of the people who live here. Sometimes we forget that this includes hundreds of thousands of individuals who have migrated to the UK from post-socialist contexts. This project aims to support community cohesion and inclusion by better representing the memories and lived experiences of these groups.
+    </p>
+</section>
+
+<section id="thiswebsite" class="container">
+    <h2>This Website</h2>
+    <p>
+        You can engage with our project through this website in the following ways:
+    </p>
+    <ul>
+        <li>
+            Read more detailed information <a href="{% url 'general:about' %}">about the project</a>
+        </li>
+        <li>
+            Discover and respond to <a href="{% url 'communities:story-list' %}">community stories</a>
+        </li>
+        <li>
+            See our upcoming and past <a href="{% url 'events:event-list' %}">events</a>
+        </li>
+        <li>
+            View our <a href="{% url 'outputs:output-list' %}">project outputs</a>
+        </li>
+    </ul>
+</section>
+
+<section id="social" class="container">
+    <h2>Social</h2>
+    <!-- Twitter feed -->
+    <div class="twitter-feed" tabindex="0">
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/soc_post?ref_src=twsrc%5Etfw">Tweets by soc_post</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+</section>
+
+<script>
+    $(document).ready(function() {
+
+        // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
+        $('#welcome-banner-proceed').on('click', function(){
+            $('html,body').animate({ scrollTop: $('#welcome').offset().top - 50 }, 800); 
+        });
+
+    });
+</script>
 
 {% endblock %}
