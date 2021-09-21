@@ -41,12 +41,26 @@
         margin-top: 0.5em;
         font-size: 1.5em;
     }
+
+    /* ---------- About ---------- */
+
+    .about-team-person img {
+        display: inline-block;
+        margin-right: 2em;
+        vertical-align: middle;
+    }
+    
+    .about-team-person p {
+        display: inline-block;
+        width: calc(100% - 14em);
+        vertical-align: middle;
+    }
     
     /* ---------- Footer ---------- */
 
     #footer-content img {
         height: 5em;
-        margin: 0 4em 2em 4em;
+        margin: 0 2em 2em 2em;
         display: inline-block;
     }
 }
