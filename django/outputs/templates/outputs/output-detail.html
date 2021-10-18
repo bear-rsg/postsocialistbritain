@@ -27,7 +27,7 @@
     {% endif %}
 
     {% if object.video %}
-        <div id="output-detail-video" class="youtube-container">
+        <div id="output-detail-video" class="video-container">
             {% video object.video as my_video %}
             URL: {{ my_video.url }}
             Thumbnail: {{ my_video.thumbnail }}
