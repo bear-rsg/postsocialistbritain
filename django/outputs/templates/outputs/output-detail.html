@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load embed_video_tags %}
 
 {% block main %}
 
@@ -25,9 +26,15 @@
         </div>
     {% endif %}
 
-    {% if object.youtube_video_id %}
+    {% if object.video %}
         <div id="output-detail-video" class="youtube-container">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{ object.youtube_video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {% video object.video as my_video %}
+            URL: {{ my_video.url }}
+            Thumbnail: {{ my_video.thumbnail }}
+            Backend: {{ my_video.backend }}
+
+            {% video my_video %}
+            {% endvideo %}
         </div>
     {% endif %}
     

@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from embed_video.fields import EmbedVideoField
 import os
 
 
@@ -12,8 +13,7 @@ class Output(models.Model):
     description = RichTextField(blank=True, null=True)
     image = models.ImageField(upload_to='outputs-images', blank=True, null=True)
     file = models.FileField(upload_to='outputs-files', blank=True, null=True)
-    youtube_video_id = models.CharField(max_length=50, blank=True, null=True,
-                                        help_text='Found in video URL after v= e.g. 1cK5uZ58XF0')
+    video = EmbedVideoField(blank=True, null=True)
     link = models.URLField(blank=True, null=True)
 
     # Admin fields

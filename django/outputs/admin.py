@@ -30,7 +30,7 @@ class OutputAdminView(admin.ModelAdmin):
                     'description',
                     'image',
                     'file',
-                    'youtube_video_id',
+                    'video',
                     'link',
                     'admin_published')
     list_filter = ('admin_published', )
