@@ -30,10 +30,11 @@ class OutputAdminView(admin.ModelAdmin):
                     'description',
                     'image',
                     'file',
+                    'youtube_video_id',
                     'link',
                     'admin_published')
     list_filter = ('admin_published', )
-    search_fields = ('name', 'description', 'file', 'link')
+    search_fields = ('name', 'description', 'file', 'link', 'youtube_video_id')
     list_per_page = 30
     ordering = ('name', '-id')
     actions = (publish_output, unpublish_output)
