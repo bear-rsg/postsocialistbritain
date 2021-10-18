@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load embed_video_tags %}
 
 {% block main %}
 
@@ -22,6 +23,14 @@
         <div id="output-detail-file">
             <label>Download file:</label>
             <a href="{{ object.file.url }}">{{ object.filename }}</a>
+        </div>
+    {% endif %}
+
+    {% if object.video %}
+        <div id="output-detail-video" class="video-container">
+            {% video object.video as my_video %}
+                {% video my_video %}
+            {% endvideo %}
         </div>
     {% endif %}
     
