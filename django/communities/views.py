@@ -36,6 +36,24 @@ class StoryDetailView(DetailView):
         return context
 
 
+class StoryCreateView(CreateView):
+    """
+    Class-based view to create a new Story object in the database
+    """
+
+    template_name = 'communities/story-create.html'
+    form_class = forms.StoryCreateForm
+    success_url = reverse_lazy('communities:story-create-success')
+
+
+class StoryCreateSuccessTemplateView(TemplateView):
+    """
+    Class-based view to show the story create success template
+    """
+
+    template_name = 'communities/story-create-success.html'
+
+
 class ResponseCreateView(CreateView):
     """
     Class-based view to create a new models.Response object in the database

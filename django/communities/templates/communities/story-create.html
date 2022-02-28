@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<div class="container">
+
+    <!-- Story -->
+    <div id="story-detail">
+        <h2>Share Your Story</h2>
+        <form enctype="multipart/form-data" id="story-create-form" name="story-create-form" method="POST">
+            <!-- Security CSRF token -->
+            {% csrf_token %}
+            <!-- Form -->
+            {{ form.as_p }}
+            <!-- Submit form button -->
+            <button id="story-create-submit" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -13,8 +13,11 @@ class Story(models.Model):
     """
 
     story_name = models.CharField(max_length=255, unique=True)
+    story_theme = models.CharField(blank=True, max_length=1000)
     story_text = RichTextField()
     story_image = models.ImageField(upload_to='communities-stories-images', blank=True, null=True)
+    author_name = models.CharField(blank=True, max_length=255)
+    author_email = models.EmailField(blank=True)
     # Admin fields
     admin_published = models.BooleanField(default=False)
     admin_notes = RichTextField(blank=True, null=True)
