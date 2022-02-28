@@ -331,7 +331,13 @@ label[for=id_story] {
     display: block;
 }
 
-#story-detail-content-respondlink {
+
+.create-form-button-link-container {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.create-form-button-link {
     background: #C80E0F;
     color: white;
     cursor: pointer;
@@ -340,6 +346,12 @@ label[for=id_story] {
     width: 13em;
     padding: 1em;
     border-radius: 0.3em;
+}
+
+.create-form-button-link:hover {
+    text-decoration: none;
+    color: white;
+    background: #b60e0e;
 }
 
 #response-create {
