@@ -310,6 +310,16 @@ main a {
     margin-top: 0.3em;
 }
 
+.stories-list-item-details {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.stories-list-item-details span {
+    display: inline-block;
+    margin: 1em 2em 0em 0em;
+}
+
 #response-create-bg {
     display: none;
     position: fixed;
@@ -323,6 +333,12 @@ main a {
 
 label[for=id_story] {
     display: none;
+}
+
+#story-detail-theme,
+#story-detail-author {
+    text-align: center;
+    margin: 0.5em 0;
 }
 
 #story-detail-content-image img {

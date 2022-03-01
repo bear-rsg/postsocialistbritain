@@ -36,7 +36,8 @@ class StoryCreateForm(forms.ModelForm):
 
     story_theme = forms.CharField(max_length=1000,
                                   help_text='Optional',
-                                  label='Theme')
+                                  label='Theme',
+                                  required=False)
     story_text = forms.CharField(max_length=1000,
                                  widget=forms.Textarea(),
                                  label='Story text')
