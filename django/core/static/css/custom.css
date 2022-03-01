@@ -325,6 +325,12 @@ label[for=id_story] {
     display: none;
 }
 
+#story-detail-theme,
+#story-detail-author {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
 #story-detail-content-image img {
     max-width: 80%;
     margin: 2em auto;

@@ -10,10 +10,18 @@
 
         <h2>{{ object.story_name }}</h2>
 
+        {% if object.story_theme %}
+            <div id="story-detail-theme">Theme: {{ object.story_theme }}</div>
+        {% endif %}
+
+        {% if object.author_name %}
+            <div id="story-detail-author">Written by {{ object.author_name }}</div>
+        {% endif %}
+
         <div id="story-detail-content">
 
             <div id="story-detail-content-text">
-                {{ object.story_text | safe }}
+                {{ object.story_text | safe | linebreaks }}
             </div>
 
             <!-- Optional story image -->
