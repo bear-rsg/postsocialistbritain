@@ -310,6 +310,16 @@ main a {
     margin-top: 0.3em;
 }
 
+.stories-list-item-details {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.stories-list-item-details span {
+    display: inline-block;
+    margin: 1em 2em 0em 0em;
+}
+
 #response-create-bg {
     display: none;
     position: fixed;
