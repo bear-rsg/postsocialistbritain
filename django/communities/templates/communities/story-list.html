@@ -14,7 +14,7 @@
         </section>
 
         <section class="create-form-button-link-container">
-            <a href="{% url 'communities:story-create' %}" class="create-form-button-link">Share your story</a>
+            <a href="{% url 'communities:story-create' %}" class="create-form-button-link">Add Your Contribution</a>
         </section>
 
         <!-- Stories -->
@@ -28,7 +28,7 @@
                             <span>Theme: {{ object.story_theme }}</span>
                         {% endif %}
                         {% if object.author_name %}
-                            <span>Written by {{ object.author_name }}</span>
+                            <span>By {{ object.author_name }}</span>
                         {% endif %}
                     </div>
                 </a>
