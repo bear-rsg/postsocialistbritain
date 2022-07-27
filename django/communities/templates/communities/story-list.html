@@ -22,7 +22,7 @@
             {% for object in object_list %}
                 <a href="{% url 'communities:story-detail' object.id %}" class="stories-list-item">
                     <div class="stories-list-item-name"> {{ object.story_name }}</div>
-                    <div class="stories-list-item-text"> {{ object.story_text | striptags | truncatechars:50 }}</div>
+                    <div class="stories-list-item-text"> {{ object.story_text | striptags | safe }}</div>
                     <div class="stories-list-item-details">
                         {% if object.story_theme %}
                             <span>Theme: {{ object.story_theme }}</span>
