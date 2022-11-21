@@ -41,8 +41,8 @@ class StoryCreateForm(forms.ModelForm):
     story_text = forms.CharField(max_length=1000,
                                  widget=forms.Textarea(),
                                  label='Story text')
-    story_image = forms.ImageField(label='Upload image',
-                                   help_text='Optional',
+    story_image = forms.ImageField(label='Upload main image (select one)',
+                                   help_text='Optional. This main image will appear in stories list and detail page of each story.',
                                    required=False)
     author_name = forms.CharField(label='Name',
                                   widget=forms.TextInput(),
