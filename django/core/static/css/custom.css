@@ -282,14 +282,18 @@ main a {
 #stories-list {
     padding: 1.5em 0;
     margin-top: 1em;
+    text-align: center;
 }
 
 .stories-list-item {
+    width: calc(33% - 1.3em);
+    min-width: 20em;
+    display: inline-block;
     padding: 1em;
-    margin-bottom: 1.3em;
+    margin: 1em 0.64em;
     border: 1px solid #AAA;
-    display: block;
     color: #344152;
+    vertical-align: top;
 }
 
 .stories-list-item:hover {
@@ -304,15 +308,14 @@ main a {
     font-size: 1.3em;
 }
 
-.stories-list-item-text {
-    opacity: 0.8;
-    font-size: 0.95;
-    margin-top: 0.3em;
+.stories-list-item-image img {
+    width: 100%;
+    margin: 1em auto;
 }
 
+.stories-list-item-text,
 .stories-list-item-details {
-    font-size: 0.9em;
-    opacity: 0.8;
+    display: none;
 }
 
 .stories-list-item-details span {
@@ -341,12 +344,12 @@ label[for=id_story] {
     margin: 0.5em 0;
 }
 
-#story-detail-content-image img {
+#story-detail-content-image img,
+.story-detail-content-additionalimage {
     max-width: 80%;
     margin: 2em auto;
     display: block;
 }
-
 
 .create-form-button-link-container {
     text-align: center;

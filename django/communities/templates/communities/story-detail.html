@@ -31,6 +31,10 @@
                 </div>
             {% endif %}
 
+            {% for additionalimage in object.additionalimages.all %}
+                <img src="{{ additionalimage.image.url }}" alt="additional story image" class="story-detail-content-additionalimage">
+            {% endfor %}
+
         </div>
 
         <div class="form-show create-form-button-link">Respond to this story</div>

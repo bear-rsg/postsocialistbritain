@@ -13,11 +13,24 @@
             {% csrf_token %}
             <!-- Form -->
             {{ form.as_p }}
+            <!-- Additional images -->
+            <p>
+                <label for="id_story_additionalimages">Upload additional images (select multiple):</label>
+                <input id="id_story_additionalimages" type="file" name="additionalimages" accept="image/*" multiple>
+                <span class="helptext">Optional. These additional images will only show on the detail page of this story.</span>
+            </p>
             <!-- Submit form button -->
             <button id="story-create-submit" class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
 
 </div>
+
+<script>
+    $(document).ready(function() {
+        var storyImage = $('#id_story_image').closest('p');
+        $('#id_story_additionalimages').closest('p').detach().insertAfter(storyImage);
+    });
+</script>
 
 {% endblock %}
