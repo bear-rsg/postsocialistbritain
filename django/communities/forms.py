@@ -42,7 +42,7 @@ class StoryCreateForm(forms.ModelForm):
                                  widget=forms.Textarea(),
                                  label='Story text')
     story_image = forms.ImageField(label='Upload main image (select one)',
-                                   help_text='Optional. This main image will appear in stories list and detail page of each story.',
+                                   help_text='Optional. This image will appear in the list of stories.',
                                    required=False)
     author_name = forms.CharField(label='Name',
                                   widget=forms.TextInput(),
