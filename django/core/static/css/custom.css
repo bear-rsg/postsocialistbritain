@@ -313,17 +313,9 @@ main a {
     margin: 1em auto;
 }
 
-.stories-list-item-text {
-    opacity: 0.8;
-    font-size: 0.95;
-    margin-top: 0.3em;
-    text-align: left;
-}
-
+.stories-list-item-text,
 .stories-list-item-details {
-    font-size: 0.9em;
-    opacity: 0.8;
-    text-align: left;
+    display: none;
 }
 
 .stories-list-item-details span {
