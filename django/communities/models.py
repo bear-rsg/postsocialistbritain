@@ -33,6 +33,18 @@ class Story(models.Model):
         ordering = ['-meta_created_datetime', 'story_name', 'id']
 
 
+class StoryAdditionalImage(models.Model):
+    """
+    An additional image associated with a story
+    """
+
+    story = models.ForeignKey(Story, related_name='additionalimages', on_delete=models.PROTECT)
+    image = models.ImageField(upload_to='communities-stories-images')
+
+    def __str__(self):
+        return f'{self.story}: Image {self.image}'
+
+
 class Response(models.Model):
     """
     The response that a user submits in response to a story

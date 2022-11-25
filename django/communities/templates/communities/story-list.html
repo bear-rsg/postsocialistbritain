@@ -21,8 +21,13 @@
         <section id="stories-list">
             {% for object in object_list %}
                 <a href="{% url 'communities:story-detail' object.id %}" class="stories-list-item">
-                    <div class="stories-list-item-name"> {{ object.story_name }}</div>
-                    <div class="stories-list-item-text"> {{ object.story_text | striptags | safe }}</div>
+                    <div class="stories-list-item-name">{{ object.story_name }}</div>
+                    {% if object.story_image %}
+                        <div class="stories-list-item-image">
+                            <img src="{{ object.story_image.url }}" alt="Main story image">
+                        </div>
+                    {% endif %}
+                    <div class="stories-list-item-text">{{ object.story_text | striptags | safe }}</div>
                     <div class="stories-list-item-details">
                         {% if object.story_theme %}
                             <span>Theme: {{ object.story_theme }}</span>

@@ -24,6 +24,14 @@ def unpublish_story(modeladmin, request, queryset):
 unpublish_story.short_description = "Unpublish selected stories (will not appear on main site)"
 
 
+class StoryAdditionalImageInline(admin.TabularInline):
+    """
+    A subform/inline form for StoryAdditionalImage to be used in StoryAdminView
+    """
+    model = models.StoryAdditionalImage
+    extra = 0
+
+
 class StoryAdminView(admin.ModelAdmin):
     """
     Customise the content of the list of Stories in the Django admin
@@ -37,6 +45,7 @@ class StoryAdminView(admin.ModelAdmin):
     list_filter = ('admin_published',)
     list_per_page = 30
     ordering = ('-id',)
+    inlines = (StoryAdditionalImageInline,)
     actions = (publish_story, unpublish_story)
 
 

@@ -1,5 +1,6 @@
 from django.views.generic import (CreateView, TemplateView, ListView, DetailView)
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 from . import (models, forms)
 
 
@@ -44,6 +45,26 @@ class StoryCreateView(CreateView):
     template_name = 'communities/story-create.html'
     form_class = forms.StoryCreateForm
     success_url = reverse_lazy('communities:story-create-success')
+
+    def post(self, request):
+        """
+        Save the main form for the new Story object and
+        create child StoryAdditionalImage objects
+        """
+        form = forms.StoryCreateForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Save main object
+            new_story = form.save()
+            # Create child StoryAdditionalImage objects
+            additionalimages = request.FILES.getlist('additionalimages')
+            for additionalimage in additionalimages:
+                models.StoryAdditionalImage.objects.create(
+                    story=new_story,
+                    image=additionalimage
+                )
+            return HttpResponseRedirect(reverse('communities:story-create-success'))
+        else:
+            return HttpResponseRedirect(reverse('communities:story-create'))
 
 
 class StoryCreateSuccessTemplateView(TemplateView):
