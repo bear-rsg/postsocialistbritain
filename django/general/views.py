@@ -15,6 +15,13 @@ class AboutTemplateView(TemplateView):
     template_name = 'general/about.html'
 
 
+class EducationTemplateView(TemplateView):
+    """
+    Class-based view to show the education template
+    """
+    template_name = 'general/education.html'
+
+
 class CookiesTemplateView(TemplateView):
     """
     Class-based view to show the cookies template

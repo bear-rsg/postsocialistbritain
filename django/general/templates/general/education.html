@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<section class="container">
+    <h2>Workshops on Memory and Photography</h2>
+
+    <p>
+        In May 2022, the Post-Socialist Britain? team partnered with Sandwell Colleges to collaborate on a short series of workshops that explored the theme of memory in photography. Level 2 and 3 photography students were challenged to create a short series of photographs that engaged with the theme of memory, which they were free to interpret in their own way. In the links below, you will find:
+    </p>
+    <div class="education-links">
+        <a href="{% static 'documents/education/College-Resources.pdf' %}" target="_blank">
+            <i class="fas fa-file-download"></i>
+            <span>The resources pack developed from and for the workshops, including case studies that draw on the work produced by two of the participants (Hollie Askew and Yasmin Robinson)</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=MU7yOaz0AVE" target="_blank">
+            <i class="fas fa-video"></i>
+            <span>A short video by Oxana Bischin explaining how the resources might be used in the classroom</span>
+        </a>
+        <a href="{% static 'documents/education/Sandwell-College-Photobook.pdf' %}" target="_blank">
+            <i class="fas fa-file-download"></i>
+            <span>The photobook showcasing the work of our participants at Sandwell Colleges</span>
+        </a>
+    </div>
+    <img id="education-workshopsonmemoryandphotography-img-1" src="{% static 'images/education/education-workshopsonmemoryandphotography-img-1.jpg' %}" alt="Photograph from workshop">
+    <p>
+        The team are now working with Art and Design students at Nottingham Trent University to produce a collection of innovative resources for teaching histories of migration to the UK across the curriculum. The resources will be launched in May 2023 – watch this space!
+    </p>
+</section>
+
+{% endblock %}
