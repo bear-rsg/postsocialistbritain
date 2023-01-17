@@ -84,6 +84,12 @@
                             Outputs
                         </a>
                     </li>
+                    <!-- Education -->
+                    <li class="nav-item">
+                        <a class="nav-link{% if '/education/' in request.path %} active{% endif %}" href="{% url 'general:education' %}">
+                            Education
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

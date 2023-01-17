@@ -557,6 +557,47 @@ label[for=id_story] {
     margin: 3em auto;
 }
 
+/* ---------- Education ---------- */
+
+.education-links a {
+    display: block;
+    margin: 2em auto;
+    width: 100%;
+    border: 1px solid #344152;
+    color: #344152;
+    cursor: pointer;
+}
+
+.education-links a i {
+    display: inline-block;
+    width: 4rem;
+    padding: 1rem;
+    vertical-align: middle;
+    background: #344152;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.education-links a span {
+    display: inline-block;
+    width: calc(100% - 4.27rem);
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+
+.education-links a:hover {
+    background: #344152;
+    color: white;
+    text-decoration: none;
+}
+
+#education-workshopsonmemoryandphotography-img-1 {
+    width: 20em;
+    max-width: 90%;
+    display: block;
+    margin: 4em auto;
+}
 
 /* ---------- Footer ---------- */
 
