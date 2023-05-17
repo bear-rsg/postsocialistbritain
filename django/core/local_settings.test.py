@@ -17,14 +17,6 @@ RECAPTCHA_PRIVATE_KEY = ''
 
 DEBUG = True
 
-# Set static file storage.
-# In live, use ManifestStaticFilesStorage with DEBUG set to False
-# In other environments, use StaticFilesStorage with DEBUG set to True
-if DEBUG is True:
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-else:
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {
