@@ -592,6 +592,25 @@ label[for=id_story] {
     text-decoration: none;
 }
 
+.education-pdfpreviews {
+    text-align: center;
+}
+
+.education-pdfpreviews a {
+    width: 32%;
+    padding: 1em;
+    display: inline-block;
+}
+
+.education-pdfpreviews a img {
+    width: 100%;
+}
+
+#education-unfamiliar-preview {
+    height: 70vh;
+    width: 100%;
+}
+
 #education-workshopsonmemoryandphotography-img-1 {
     width: 20em;
     max-width: 90%;
