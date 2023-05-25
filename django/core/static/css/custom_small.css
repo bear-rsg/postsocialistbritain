@@ -62,7 +62,14 @@
     #map-object {
         height: calc(100vh - 10em);
     }
-    
+
+    /* ---------- Education ---------- */
+
+    .education-pdfpreviews a {
+        width: 90%;
+        padding: 1em;
+    }
+
     /* ---------- Footer ---------- */
 
     #footer-content img {
