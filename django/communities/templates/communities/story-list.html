@@ -13,10 +13,6 @@
             <input type="text" id="stories-list-filter-input" title="stories-list-filter-input" name="stories-list-filter-input">
         </section>
 
-        <section class="create-form-button-link-container">
-            <a href="{% url 'communities:story-create' %}" class="create-form-button-link">Add Your Contribution</a>
-        </section>
-
         <!-- Stories -->
         <section id="stories-list">
             {% for object in object_list %}
