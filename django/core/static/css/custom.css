@@ -557,6 +557,14 @@ label[for=id_story] {
     margin: 3em auto;
 }
 
+/* ---------- Engagement ---------- */
+
+.engagement-image-large {
+    display: block;
+    margin: 3em auto;
+    width: 100%;
+}
+
 /* ---------- Education ---------- */
 
 .education-links a {

@@ -72,6 +72,12 @@
                             Communities
                         </a>
                     </li>
+                    <!-- Engagement -->
+                    <li class="nav-item">
+                        <a class="nav-link{% if '/engagement/' in request.path %} active{% endif %}" href="{% url 'general:engagement' %}">
+                            Engagement
+                        </a>
+                    </li>
                     <!-- Events -->
                     <li class="nav-item">
                         <a class="nav-link{% if '/events/' in request.path %} active{% endif %}" href="{% url 'events:event-list' %}">
