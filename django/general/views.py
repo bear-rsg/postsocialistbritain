@@ -15,6 +15,13 @@ class AboutTemplateView(TemplateView):
     template_name = 'general/about.html'
 
 
+class EngagementTemplateView(TemplateView):
+    """
+    Class-based view to show the engagement template
+    """
+    template_name = 'general/engagement.html'
+
+
 class EducationTemplateView(TemplateView):
     """
     Class-based view to show the education template

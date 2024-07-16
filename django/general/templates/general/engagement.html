@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<section class="container">
+    <h2>Engagement</h2>
+
+    <h3>Exhibition</h3>
+    <p>
+        Artist in Residence Paulina Korobkiewicz worked with the participants of the Central European Photography Club to develop the project exhibition, Homeland. The exhibition combined Paulina’s own artistic response to the questions posed in our research about migration, memory and post-socialism with the work of four Photography Club members: Sylwia Ciszewska-Peciak, Yuxi Hou, Ismail Khokon, and Marcin Forys. A video installation showcased the work of other members of the Club. Combined, the exhibition revealed the super-diversity of these spaces and the power of creative practice to inspire what we are terming “mnemonic conviviality” – a “living with difference” based on an attachment to place and the sharing of everyday experience and memory.
+    </p>
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_1.jpg' %}" alt="engagement photograph">
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_2.jpg' %}" alt="engagement photograph">
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_3.jpg' %}" alt="engagement photograph">
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_4.jpg' %}" alt="engagement photograph">
+    <p>
+        The video below shows visitor responses to the Homeland exhibition.
+    </p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SG6S93mSczQ?si=Ed2tWJzvzm4b5hJT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p>
+        <a href="{% static 'documents/engagement/homeland.pdf' %}" target="_blank">Click here to download the exhibition catalogue</a>, including essays by Sara Jones (Project PI), Alicja Kaczmarek (Director of Centrala), and Rafailia Thiraiou (Exhibition Curator). Please contact the project team, if you would like to purchase a hard copy.
+    </p>
+
+    <h3>Celebration</h3>
+    <p>
+        As part of our engagement with migrant communities in West Bromwich and Hyson Green and to recognise the work of the participants of the Central European Photography Club, we co-organised with Centrala two celebration events: one in West Bromwich Town Hall and one in New Art Exchange. The events combined crafting workshops, photography, Polish food, and Ukrainian music from the band Muha.
+    </p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fdeGynkMWWc?si=ZHY3EM2Q3VMXvMWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+    <h3>Creative Workshops</h3>
+    <p>
+        A series of creative practice workshops in Birmingham and Nottingham further engaged communities with the exhibition.
+    </p>
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_5.jpg' %}" alt="engagement photograph">
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_6.jpg' %}" alt="engagement photograph">
+    <img class="engagement-image-large" src="{% static 'images/engagement/engagement_7.jpg' %}" alt="engagement photograph">
+    <p>
+        All photography courtesy of Centrala. © Angela Grabowska.
+    </p>
+
+</section>
+
+{% endblock %}
