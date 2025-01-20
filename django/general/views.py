@@ -22,6 +22,13 @@ class EngagementTemplateView(TemplateView):
     template_name = 'general/engagement.html'
 
 
+class UkraineTemplateView(TemplateView):
+    """
+    Class-based view to show the ukraine template
+    """
+    template_name = 'general/ukraine.html'
+
+
 class EducationTemplateView(TemplateView):
     """
     Class-based view to show the education template

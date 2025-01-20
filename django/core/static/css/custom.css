@@ -565,6 +565,14 @@ label[for=id_story] {
     width: 100%;
 }
 
+/* ---------- Ukraine ---------- */
+
+.ukraine-image-large {
+    display: block;
+    margin: 3em auto;
+    width: 100%;
+}
+
 /* ---------- Education ---------- */
 
 .education-links a {
