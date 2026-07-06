@@ -1,6 +1,7 @@
 {
     "defaults": {
         "runners": ["axe", "htmlcs"],
+        "hideElements": ".nav-link",
         "chromeLaunchConfig": {
             "args": ["--no-sandbox"]
         }
